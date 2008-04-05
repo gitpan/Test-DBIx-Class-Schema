@@ -6,7 +6,7 @@ use warnings;
 # Always remember to do all digits for the version even if they're 0
 # i.e. first release of 0.XX *must* be 0.XX000. This avoids fBSD ports
 # brain damage and presumably various other packaging systems too
-our $VERSION = '0.01002';
+our $VERSION = '0.01003';
 
 use Test::More;
 
@@ -142,17 +142,18 @@ Create a test script that looks like this:
     use warnings;
 
     # load the module that provides all of the common test functionality
-    use FindBin qw($Bin);
-    use lib $Bin;
-    use SchemaTest;
+    use Test::DBIx::Class::Schema;
 
-    my $schematest = SchemaTest->new(
+    # create a new test object
+    my $schematest = Test::DBIx::Class::Schema->new(
         {
             dsn       => 'dbi:Pg:dbname=mydb',
             namespace => 'MyDB::Schema',
             moniker   => 'SomeTable',
         }
     );
+
+    # tell it what to test
     $schematest->methods(
         {
             columns => [
@@ -184,6 +185,7 @@ Create a test script that looks like this:
         }
     );
 
+    # run the tests
     $schematest->run_tests();
 
 Run the test script:
