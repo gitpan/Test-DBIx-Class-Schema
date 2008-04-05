@@ -2,6 +2,7 @@
 use inc::Module::Install;
 
 # Define metadata
+name            'Test-DBIx-Class-Schema';
 all_from        'lib/Test/DBIx/Class/Schema.pm';
 
 # Specific dependencies
