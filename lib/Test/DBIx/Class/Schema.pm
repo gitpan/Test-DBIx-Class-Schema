@@ -6,7 +6,7 @@ use warnings;
 # Always remember to do all digits for the version even if they're 0
 # i.e. first release of 0.XX *must* be 0.XX000. This avoids fBSD ports
 # brain damage and presumably various other packaging systems too
-our $VERSION = '0.01000';
+our $VERSION = '0.01001';
 
 use Test::More;
 
@@ -130,7 +130,7 @@ from writing the relevant test scripts.
 
 As a lazy person myself I don't want to write numerous near-identical scripts.
 
-SchemaTest takes the copy-and-paste out of DBIC schema class testing.
+Test::DBIx::Class::Schema takes the copy-and-paste out of DBIC schema class testing.
 
 =head1 SYNOPSIS
 
