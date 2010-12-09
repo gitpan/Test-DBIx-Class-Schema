@@ -1,6 +1,9 @@
 NAME
     Test::DBIx::Class::Schema - DBIx::Class schema sanity checking tests
 
+VERSION
+    version 0.01009
+
 DESCRIPTION
     It's really useful to be able to test and confirm that DBIC classes have
     and support a known set of methods.
@@ -92,7 +95,10 @@ SEE ALSO
     DBIx::Class, Test::More, Test::Aggregate
 
 AUTHOR
-    Chisel Wright "<chiselwright@users.berlios.de>"
+    Chisel Wright "<chisel@chizography.net>"
+
+CONTRIBUTORS
+    Gianni Ceccarelli "<dakkar@thenautilus.net>"
 
 LICENSE
     Copyright 2008-2010 by Chisel Wright

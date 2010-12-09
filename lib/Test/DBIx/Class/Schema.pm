@@ -1,12 +1,13 @@
 package Test::DBIx::Class::Schema;
+BEGIN {
+  $Test::DBIx::Class::Schema::VERSION = '0.01009';
+}
+BEGIN {
+  $Test::DBIx::Class::Schema::DIST = 'Test-DBIx-Class-Schema';
+}
 # vim: ts=8 sts=4 et sw=4 sr sta
 use strict;
 use warnings;
-
-# Always remember to do all digits for the version even if they're 0
-# i.e. first release of 0.XX *must* be 0.XX000. This avoids fBSD ports
-# brain damage and presumably various other packaging systems too
-our $VERSION = '0.01008';
 
 # ensure we have "done_testing"
 use Test::More 0.92;
@@ -187,6 +188,10 @@ __END__
 =head1 NAME
 
 Test::DBIx::Class::Schema - DBIx::Class schema sanity checking tests
+
+=head1 VERSION
+
+version 0.01009
 
 =head1 DESCRIPTION
 

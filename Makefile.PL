@@ -1,15 +1,53 @@
-# Load the Module::Install bundled in ./inc/
-use inc::Module::Install;
 
-# Define metadata
-name            'Test-DBIx-Class-Schema';
-all_from        'lib/Test/DBIx/Class/Schema.pm';
+use strict;
+use warnings;
 
-# Specific dependencies
-requires        'Test::More'            => '0.92';
-requires        'DBIx::Class::Schema'   => 0; # any version will do
-build_requires  'Test::More'            => '0.92';
-build_requires  'FindBin'               => 0;   # core since 5.00307
 
-auto_install;
-WriteAll;
+
+use ExtUtils::MakeMaker 6.31;
+
+
+
+my %WriteMakefileArgs = (
+  'ABSTRACT' => 'DBIx::Class schema sanity checking tests',
+  'AUTHOR' => 'Chisel Wright <chisel@chizography.net>',
+  'BUILD_REQUIRES' => {},
+  'CONFIGURE_REQUIRES' => {
+    'ExtUtils::MakeMaker' => '6.31'
+  },
+  'DISTNAME' => 'Test-DBIx-Class-Schema',
+  'EXE_FILES' => [],
+  'LICENSE' => 'perl',
+  'NAME' => 'Test::DBIx::Class::Schema',
+  'PREREQ_PM' => {
+    'DBIx::Class::Schema' => '0',
+    'FindBin' => '0',
+    'Test::More' => '0.92'
+  },
+  'VERSION' => '0.01009',
+  'test' => {
+    'TESTS' => 't/*.t'
+  }
+);
+
+
+unless ( eval { ExtUtils::MakeMaker->VERSION(6.56) } ) {
+  my $br = delete $WriteMakefileArgs{BUILD_REQUIRES};
+  my $pp = $WriteMakefileArgs{PREREQ_PM};
+  for my $mod ( keys %$br ) {
+    if ( exists $pp->{$mod} ) {
+      $pp->{$mod} = $br->{$mod} if $br->{$mod} > $pp->{$mod};
+    }
+    else {
+      $pp->{$mod} = $br->{$mod};
+    }
+  }
+}
+
+delete $WriteMakefileArgs{CONFIGURE_REQUIRES}
+  unless eval { ExtUtils::MakeMaker->VERSION(6.52) };
+
+WriteMakefile(%WriteMakefileArgs);
+
+
+
