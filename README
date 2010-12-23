@@ -2,7 +2,7 @@ NAME
     Test::DBIx::Class::Schema - DBIx::Class schema sanity checking tests
 
 VERSION
-    version 0.01009
+    version 0.01010
 
 DESCRIPTION
     It's really useful to be able to test and confirm that DBIC classes have

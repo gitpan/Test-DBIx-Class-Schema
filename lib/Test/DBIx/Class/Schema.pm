@@ -1,6 +1,6 @@
 package Test::DBIx::Class::Schema;
 BEGIN {
-  $Test::DBIx::Class::Schema::VERSION = '0.01009';
+  $Test::DBIx::Class::Schema::VERSION = '0.01010';
 }
 BEGIN {
   $Test::DBIx::Class::Schema::DIST = 'Test-DBIx-Class-Schema';
@@ -191,7 +191,7 @@ Test::DBIx::Class::Schema - DBIx::Class schema sanity checking tests
 
 =head1 VERSION
 
-version 0.01009
+version 0.01010
 
 =head1 DESCRIPTION
 
