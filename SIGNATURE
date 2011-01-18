@@ -1,5 +1,5 @@
 This file contains message digests of all files listed in MANIFEST,
-signed via the Module::Signature module, version 0.66.
+signed via the Module::Signature module, version 0.55.
 
 To verify the content in this distribution, first make sure you have
 Module::Signature installed, then type:
@@ -14,15 +14,15 @@ not run its Makefile.PL or Build.PL.
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-SHA1 a7e20505d25e08464f02ec471c8ac3ac557b3dde Changes
-SHA1 0b70e29b8a1093fc44bb6dba4288a1edbc43f883 LICENSE
-SHA1 dc27b87df05f70c5c38d31ef67a7369639d57bd9 MANIFEST
-SHA1 2048a06a49d55a3ba0adf041107fead6dfb2b8a5 META.yml
-SHA1 d983d169412dc215400580772c9669be9f55cfbe Makefile.PL
-SHA1 8b0b1865413d487ede7669832dab918420b1a720 README
-SHA1 e3f18bc8569608b7a436b38c78735f2959114967 dist.ini
+SHA1 d9fc15d08a334173703ef6b0c2153c722d90c60a Changes
+SHA1 2a26f86001318a1afdf7b3aa074c56e67b66b826 LICENSE
+SHA1 40f88be228c1ce03cbb76cd6bf4f9c85930cada2 MANIFEST
+SHA1 923e5172b1d9a6ab0c15b2be1dfd3011225f013d META.yml
+SHA1 a94c0e55ebe79bbc25bdea2a21724ea9c8c05bd0 Makefile.PL
+SHA1 da9f12d9151849af67310aaf52e876f4ed526ac8 README
+SHA1 b7a1428f132dfb0a91d318fcf3e49ad522b560b2 dist.ini
 SHA1 91e978217f924a308a076c49f8ab4d56dbc6febc docs/SubmittingPatches.pod
-SHA1 b9afaf9df1a90636937f7861a51b96c9bac687b7 lib/Test/DBIx/Class/Schema.pm
+SHA1 76b7a2f764e3f7d35591a5f591fe44e6d49442c2 lib/Test/DBIx/Class/Schema.pm
 SHA1 820501b5591b35b12062ab4aed104d221530356e t/10.test.dbix.class.schema.t
 SHA1 afaebcfd027ba7e601fe39f41f90c1593927ec1a t/11.testdata.t
 SHA1 f22c993dd08332453744500dd859f22ce55b92dc t/12.run_tests.t
@@ -35,10 +35,11 @@ SHA1 7279e85cf08075df3ca44632894bdef16cbbbe38 t/lib/sqlite.sql
 SHA1 0068bf52fc88b39cc6509199f19a77890edb9bb0 t/release-has-version.t
 SHA1 455d1dd1867212a665ad5ea4126b572411de300c t/release-no-tabs.t
 SHA1 b30cbdfaf935017c4568c0c91b242438cb87786e t/release-pod-syntax.t
+SHA1 a4a58ff41a26a446d525d6aa86073d23cca5705b t/var/DBIxClass.db
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.10 (GNU/Linux)
 
-iEYEARECAAYFAk0TresACgkQh4j7xTiFuxE2kACfTWMql02ELVXlarE4uVreehex
-tg4An1g2S9CbIhi16v9/cMzwS40uBDoj
-=s6Fx
+iEYEARECAAYFAk01yLIACgkQh4j7xTiFuxEHmgCgrZOV1q9iQGzFEvdoR+N2mf1E
+8uoAnjHLNRp/flzyTVqurpVNa3QjKdv9
+=i09G
 -----END PGP SIGNATURE-----
