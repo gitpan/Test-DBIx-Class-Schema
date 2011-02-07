@@ -1,6 +1,6 @@
 package Test::DBIx::Class::Schema;
 BEGIN {
-  $Test::DBIx::Class::Schema::VERSION = '0.01011';
+  $Test::DBIx::Class::Schema::VERSION = '0.01012';
 }
 BEGIN {
   $Test::DBIx::Class::Schema::DIST = 'Test-DBIx-Class-Schema';
@@ -134,7 +134,8 @@ sub _test_normal_methods {
                     if ( $source->has_column($method) ) {
                         pass qq{'$method' column defined in result_source};
                         eval {
-                            my $col = $rs->get_column($method)->all;
+                            # https://rt.cpan.org/Ticket/Display.html?id=65521
+                            my $col = $rs->slice(0,0)->get_column($method)->all;
                         };
                         is($@, q{}, qq{'$method' column exists in database});
                     }
@@ -212,7 +213,7 @@ Test::DBIx::Class::Schema
 
 =head1 VERSION
 
-version 0.01011
+version 0.01012
 
 =head1 SYNOPSIS
 
@@ -312,23 +313,10 @@ L<DBIx::Class>,
 L<Test::More>,
 L<Test::Aggregate>
 
-=head1 AUTHOR
-
-Chisel Wright C<< <chisel@chizography.net> >>
-
 =head1 CONTRIBUTORS
 
 Gianni Ceccarelli C<< <dakkar@thenautilus.net> >>,
 Darius Jokilehto
-
-=head1 LICENSE
-
-Copyright 2008-2011 by Chisel Wright
-
-This program is free software; you can redistribute it and/or modify it under
-the same terms as Perl itself.
-
-See <http://www.perl.com/perl/misc/Artistic.html>
 
 =head1 AUTHOR
 
