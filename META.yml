@@ -13,11 +13,11 @@ meta-spec:
   version: 1.4
 name: Test-DBIx-Class-Schema
 requires:
-  DBIx::Class: 0.08123
+  DBIx::Class: 0.08
   FindBin: 0
   Test::More: 0.92
 resources:
   bugtracker: http://github.com/chiselwright/test-dbix-class-schema/issues
   homepage: http://github.com/chiselwright/test-dbix-class-schema
   repository: git://github.com/chiselwright/test-dbix-class-schema
-version: 0.01012
+version: 0.01013

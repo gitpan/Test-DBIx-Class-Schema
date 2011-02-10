@@ -20,11 +20,11 @@ my %WriteMakefileArgs = (
   'LICENSE' => 'perl',
   'NAME' => 'Test::DBIx::Class::Schema',
   'PREREQ_PM' => {
-    'DBIx::Class' => '0.08123',
+    'DBIx::Class' => '0.08',
     'FindBin' => '0',
     'Test::More' => '0.92'
   },
-  'VERSION' => '0.01012',
+  'VERSION' => '0.01013',
   'test' => {
     'TESTS' => 't/*.t'
   }

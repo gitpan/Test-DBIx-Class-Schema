@@ -1,6 +1,6 @@
 package Test::DBIx::Class::Schema;
 BEGIN {
-  $Test::DBIx::Class::Schema::VERSION = '0.01012';
+  $Test::DBIx::Class::Schema::VERSION = '0.01013';
 }
 BEGIN {
   $Test::DBIx::Class::Schema::DIST = 'Test-DBIx-Class-Schema';
@@ -94,20 +94,35 @@ sub _test_normal_methods {
             foreach my $method ( @{ $self->{methods}->{$method_type} } ) {
                 # make sure we can call the method
                 my $source = $rs->result_source;
+                my $related_source;
 
                 # 'normal' relationship
                 if ($source->has_relationship($method)) {
                     eval {
-                        my $related_source = $source->related_source($method);
+                        $related_source = $source->related_source($method);
                     };
-                    is($@, q{}, qq{related source for '$method' OK});
+                    is($@, q{}, qq{related source for '$method' exists});
+
+                    # test self.* and foreign.* columns are valid
+                    my $cond = $source->relationship_info($method)->{cond};
+                    foreach my $foreign_col (keys %{$cond} ) {
+                        my $self_col = $cond->{$foreign_col};
+                        s{^\w+\.}{} foreach ( $self_col, $foreign_col );
+                        eval {
+                            $source->resultset->slice(0,0)->get_column($self_col)->all;
+                        };
+                        is($@, q{}, qq{self.$self_col valid for '$method' relationship});
+                        eval {
+                            $related_source->resultset->slice(0,0)->get_column($foreign_col)->all;
+                        };
+                        is($@, q{}, qq{foreign.$foreign_col valid for '$method' relationship});
+                    }
 
                     next; # skip the tests that don't apply (below)
                 }
 
                 # many_to_many and proxy
                 if ( $method_type eq 'relations' ) {
-                    $DB::single=1 if $method eq 'currency';
                     my $result = $rs->new({});
                     if (can_ok( $result, $method )) {
                         my @relationships = $source->relationships;
@@ -144,8 +159,7 @@ sub _test_normal_methods {
                         for my $relationship ( @relationships ) {
                             my $proxy =
                                 $source->relationship_info($relationship)->{attrs}{proxy};
-                            next if not $proxy;
-                            if ( grep m{$method}, @$proxy ) {
+                            if ( $proxy and grep m{$method}, @$proxy ) {
                                 eval { $rs->new({})->$method; };
                                 is($@, q{}, qq{'$method' column exists via proxied relationship '$relationship'});
                             }
@@ -213,7 +227,7 @@ Test::DBIx::Class::Schema
 
 =head1 VERSION
 
-version 0.01012
+version 0.01013
 
 =head1 SYNOPSIS
 

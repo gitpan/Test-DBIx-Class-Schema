@@ -2,7 +2,7 @@ NAME
     Test::DBIx::Class::Schema
 
 VERSION
-    version 0.01012
+    version 0.01013
 
 SYNOPSIS
     Create a test script that looks like this:
