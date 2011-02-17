@@ -12,6 +12,7 @@ t/10.test.dbix.class.schema.t
 t/11.testdata.t
 t/20.run_tests.artist.t
 t/20.run_tests.cd.t
+t/20.run_tests.compound_fk.t
 t/20.run_tests.track.t
 t/30.failing_tests.artist.t
 t/30.failing_tests.cd.t
@@ -19,7 +20,11 @@ t/30.failing_tests.track.t
 t/lib/TDCSTest.pm
 t/lib/TDCSTest/Schema.pm
 t/lib/TDCSTest/Schema/Artist.pm
+t/lib/TDCSTest/Schema/Audiophile.pm
 t/lib/TDCSTest/Schema/CD.pm
+t/lib/TDCSTest/Schema/CDShop.pm
+t/lib/TDCSTest/Schema/CDShopAudiophile.pm
+t/lib/TDCSTest/Schema/Shop.pm
 t/lib/TDCSTest/Schema/Track.pm
 t/lib/sqlite.sql
 t/release-has-version.t

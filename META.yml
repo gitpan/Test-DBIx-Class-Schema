@@ -20,4 +20,4 @@ resources:
   bugtracker: http://github.com/chiselwright/test-dbix-class-schema/issues
   homepage: http://github.com/chiselwright/test-dbix-class-schema
   repository: git://github.com/chiselwright/test-dbix-class-schema
-version: 0.01013
+version: 0.01014

@@ -14,29 +14,34 @@ not run its Makefile.PL or Build.PL.
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-SHA1 ce0c63d0914edf06f598b5b9d161630a575bce57 Changes
+SHA1 42600c3c17cc680d8cbca25fa8baf6d3047f13f7 Changes
 SHA1 2a26f86001318a1afdf7b3aa074c56e67b66b826 LICENSE
-SHA1 757f02543c3f914e24cc578e6a4a88ae6df6f4eb MANIFEST
-SHA1 123c220436e837472e8feb6c61cb68a80821c049 META.yml
-SHA1 8f0a08f70aaac033197d5fdb5f41770ee39b118f Makefile.PL
-SHA1 4350e9fe7c1543f4afe4c4e91ba455e15d4beb26 README
-SHA1 84afdaf31295b6d37a8cbb8efa20cb6e177f12e0 dist.ini
+SHA1 1188292bddde98e678dba11e3fd0b8bcd2f45309 MANIFEST
+SHA1 f3b1d4de7e2f10822162f15db54f1e6154bdea07 META.yml
+SHA1 e13c74f49a5ebfc7a65704b73a82e8017b0d14b4 Makefile.PL
+SHA1 b2657adfae389e6997e8a2e9a95180268f66acc3 README
+SHA1 b0f42ef71315cd4d6efbe322128a130d81b9e3c5 dist.ini
 SHA1 91e978217f924a308a076c49f8ab4d56dbc6febc docs/SubmittingPatches.pod
-SHA1 53cdee038f24558395e772f3b7998311d48c6c0d lib/Test/DBIx/Class/Schema.pm
+SHA1 c606cccca0bc840c919b993994c3bcd086ca80e8 lib/Test/DBIx/Class/Schema.pm
 SHA1 820501b5591b35b12062ab4aed104d221530356e t/10.test.dbix.class.schema.t
-SHA1 5646e36f5993bc9b08036804851c36447273c1f0 t/11.testdata.t
+SHA1 edb74d2aa01697e29fbd1fe7d0ec2f7e14d7e17b t/11.testdata.t
 SHA1 40d38a1c91b813a218a295e37d3950a3aaa55f83 t/20.run_tests.artist.t
 SHA1 fa9d7192e1bfcb7f1d49ced6ea1cfd6f692cf7f9 t/20.run_tests.cd.t
+SHA1 177abda8b4a519d457bfa39105b4641e0f5734b4 t/20.run_tests.compound_fk.t
 SHA1 c867b12becd19574af39fd62766787b9e747f36a t/20.run_tests.track.t
 SHA1 68d6c3337510b776ed1259aad4563f71dc0e492c t/30.failing_tests.artist.t
 SHA1 2f538fe5829bd5d992c4a0c94ff027e8086f1d0e t/30.failing_tests.cd.t
 SHA1 4f49a9ad0ee19a66fe5920b48c6ca64d2b953032 t/30.failing_tests.track.t
-SHA1 f7fdcc9b9398800b3348b6ee0f3419948f8abce9 t/lib/TDCSTest.pm
-SHA1 a0de109da936ae8917564b06a5b749c31317dd0c t/lib/TDCSTest/Schema.pm
+SHA1 9725f731606c5c22f13949320977758ef0a55484 t/lib/TDCSTest.pm
+SHA1 b5081761ef9d81a4f62be60698e9bb8667993fcf t/lib/TDCSTest/Schema.pm
 SHA1 831929de86898cc63c1b4e788ad1bb5526025bae t/lib/TDCSTest/Schema/Artist.pm
+SHA1 c21d363b91bd620c9b0a20a1aa03ce729707c136 t/lib/TDCSTest/Schema/Audiophile.pm
 SHA1 d789a53175da8911befc4c8d9cf3f8e8c461795d t/lib/TDCSTest/Schema/CD.pm
+SHA1 885872999a60b2f0988d8b12586a7f9db8b0113e t/lib/TDCSTest/Schema/CDShop.pm
+SHA1 0fff115d8299a5a664ea5f81a9ae6b40bb896d5b t/lib/TDCSTest/Schema/CDShopAudiophile.pm
+SHA1 a5a64ff6e237acb01efabf1c83ef961c9fbeb0fa t/lib/TDCSTest/Schema/Shop.pm
 SHA1 7725aff0e2b19873360898308a37d7fb1221ef85 t/lib/TDCSTest/Schema/Track.pm
-SHA1 64e316e7102e2bd0d2e61fc9b74d4c5b6009dd5d t/lib/sqlite.sql
+SHA1 c20046a906ce102e6034d94b48ec343e14412eb3 t/lib/sqlite.sql
 SHA1 0068bf52fc88b39cc6509199f19a77890edb9bb0 t/release-has-version.t
 SHA1 455d1dd1867212a665ad5ea4126b572411de300c t/release-no-tabs.t
 SHA1 b30cbdfaf935017c4568c0c91b242438cb87786e t/release-pod-syntax.t
@@ -44,7 +49,7 @@ SHA1 a4a58ff41a26a446d525d6aa86073d23cca5705b t/var/DBIxClass.db
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.10 (GNU/Linux)
 
-iEYEARECAAYFAk1T/dMACgkQh4j7xTiFuxHBkACeIa6MR9ucAT+sJwx9Pn2vckRf
-uNoAoL7OlD0U+QZao2/UfUmdH1I9WtEU
-=4mS6
+iEYEARECAAYFAk1dE2cACgkQh4j7xTiFuxEO1wCfSFM7BQOyRUjYsszxGNBvpR/2
+akwAn1rGC3C9sugUWMp7hzEn37LcxcXp
+=odpT
 -----END PGP SIGNATURE-----

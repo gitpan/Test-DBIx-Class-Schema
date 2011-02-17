@@ -1,6 +1,6 @@
 package Test::DBIx::Class::Schema;
 BEGIN {
-  $Test::DBIx::Class::Schema::VERSION = '0.01013';
+  $Test::DBIx::Class::Schema::VERSION = '0.01014';
 }
 BEGIN {
   $Test::DBIx::Class::Schema::DIST = 'Test-DBIx-Class-Schema';
@@ -104,20 +104,22 @@ sub _test_normal_methods {
                     is($@, q{}, qq{related source for '$method' exists});
 
                     # test self.* and foreign.* columns are valid
-                    my $cond = $source->relationship_info($method)->{cond};
-                    foreach my $foreign_col (keys %{$cond} ) {
-                        my $self_col = $cond->{$foreign_col};
-                        s{^\w+\.}{} foreach ( $self_col, $foreign_col );
-                        eval {
-                            $source->resultset->slice(0,0)->get_column($self_col)->all;
-                        };
-                        is($@, q{}, qq{self.$self_col valid for '$method' relationship});
-                        eval {
-                            $related_source->resultset->slice(0,0)->get_column($foreign_col)->all;
-                        };
-                        is($@, q{}, qq{foreign.$foreign_col valid for '$method' relationship});
+                    my $cond_ref = $source->relationship_info($method)->{cond};
+                    $cond_ref = ref $cond_ref eq 'ARRAY' ? $cond_ref : [ $cond_ref ];
+                    foreach my $cond ( @$cond_ref ) {
+                        foreach my $foreign_col (keys %{$cond} ) {
+                            my $self_col = $cond->{$foreign_col};
+                            s{^\w+\.}{} for ( $self_col, $foreign_col );
+                            eval {
+                                $source->resultset->slice(0,0)->get_column($self_col)->all;
+                            };
+                            is($@, q{}, qq{self.$self_col valid for '$method' relationship});
+                            eval {
+                                $related_source->resultset->slice(0,0)->get_column($foreign_col)->all;
+                            };
+                            is($@, q{}, qq{foreign.$foreign_col valid for '$method' relationship});
+                        }
                     }
-
                     next; # skip the tests that don't apply (below)
                 }
 
@@ -227,7 +229,7 @@ Test::DBIx::Class::Schema
 
 =head1 VERSION
 
-version 0.01013
+version 0.01014
 
 =head1 SYNOPSIS
 
