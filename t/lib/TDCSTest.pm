@@ -73,12 +73,12 @@ sub populate_schema {
     $schema->populate(
         'Artist',
         [
-            [ qw/artistid name/ ],
+            [ qw/artistid personid name/ ],
 
-            [ 1, 'Perlfish' ],
-            [ 2, 'Fall Out Code' ],
-            [ 3, 'Inside Outers' ],
-            [ 4, 'Chisel' ],
+            [ 1, 1, 'Perlfish' ],
+            [ 2, 1, 'Fall Out Code' ],
+            [ 3, 1, 'Inside Outers' ],
+            [ 4, 1, 'Chisel' ],
         ],
     );
 
@@ -119,12 +119,21 @@ sub populate_schema {
     );
 
     $schema->populate(
-        'Audiophile',
+        'Person',
         [
-            [ qw/audiophileid name/ ],
+            [ qw/personid first_name/ ],
 
             [ 1, 'Chisel' ],
             [ 2, 'Darius' ],
+        ],
+    );
+    $schema->populate(
+        'Audiophile',
+        [
+            [ qw/personid shopid/ ],
+
+            [ 1, 1 ],
+            [ 2, 3 ],
         ],
     );
 }

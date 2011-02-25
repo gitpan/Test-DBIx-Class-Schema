@@ -4,6 +4,7 @@ MANIFEST
 META.yml
 Makefile.PL
 README
+README.mkdn
 SIGNATURE
 dist.ini
 docs/SubmittingPatches.pod
@@ -13,6 +14,8 @@ t/11.testdata.t
 t/20.run_tests.artist.t
 t/20.run_tests.cd.t
 t/20.run_tests.compound_fk.t
+t/20.run_tests.person.t
+t/20.run_tests.proxy.t
 t/20.run_tests.track.t
 t/30.failing_tests.artist.t
 t/30.failing_tests.cd.t
@@ -24,6 +27,7 @@ t/lib/TDCSTest/Schema/Audiophile.pm
 t/lib/TDCSTest/Schema/CD.pm
 t/lib/TDCSTest/Schema/CDShop.pm
 t/lib/TDCSTest/Schema/CDShopAudiophile.pm
+t/lib/TDCSTest/Schema/Person.pm
 t/lib/TDCSTest/Schema/Shop.pm
 t/lib/TDCSTest/Schema/Track.pm
 t/lib/sqlite.sql
