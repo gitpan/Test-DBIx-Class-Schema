@@ -2,7 +2,7 @@ NAME
     Test::DBIx::Class::Schema
 
 VERSION
-    version 0.01015
+    version 0.01016
 
 SYNOPSIS
     Create a test script that looks like this:
@@ -25,6 +25,9 @@ SYNOPSIS
                 # optional
                 username  => 'some_user',
                 password  => 'opensesame',
+                # rather than calling diag will test that all columns/relationships
+                # are accounted for in your test and fail the test if not
+                test_missing => 1,
             }
         );
 
@@ -98,7 +101,8 @@ SEE ALSO
     DBIx::Class, Test::More, Test::Aggregate
 
 CONTRIBUTORS
-    Gianni Ceccarelli "<dakkar@thenautilus.net>", Darius Jokilehto
+    Gianni Ceccarelli "<dakkar@thenautilus.net>", Darius Jokilehto Jason
+    Tang "<tang.jason.ch@gmail.com>",
 
 AUTHOR
     Chisel Wright <chisel@chizography.net>

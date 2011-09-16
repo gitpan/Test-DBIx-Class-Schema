@@ -4,29 +4,32 @@ use warnings;
 
 
 
-use ExtUtils::MakeMaker 6.31;
+use ExtUtils::MakeMaker 6.30;
 
 
 
 my %WriteMakefileArgs = (
-  'ABSTRACT' => 'DBIx::Class schema sanity checking tests',
-  'AUTHOR' => 'Chisel Wright <chisel@chizography.net>',
-  'BUILD_REQUIRES' => {},
-  'CONFIGURE_REQUIRES' => {
-    'ExtUtils::MakeMaker' => '6.31'
+  "ABSTRACT" => "DBIx::Class schema sanity checking tests",
+  "AUTHOR" => "Chisel Wright <chisel\@chizography.net>",
+  "BUILD_REQUIRES" => {
+    "Test::Builder::Tester" => 0,
+    "Test::More" => "0.92"
   },
-  'DISTNAME' => 'Test-DBIx-Class-Schema',
-  'EXE_FILES' => [],
-  'LICENSE' => 'perl',
-  'NAME' => 'Test::DBIx::Class::Schema',
-  'PREREQ_PM' => {
-    'DBIx::Class' => '0.08',
-    'FindBin' => '0',
-    'Test::More' => '0.92'
+  "CONFIGURE_REQUIRES" => {
+    "ExtUtils::MakeMaker" => "6.30"
   },
-  'VERSION' => '0.01015',
-  'test' => {
-    'TESTS' => 't/*.t'
+  "DISTNAME" => "Test-DBIx-Class-Schema",
+  "EXE_FILES" => [],
+  "LICENSE" => "perl",
+  "NAME" => "Test::DBIx::Class::Schema",
+  "PREREQ_PM" => {
+    "DBIx::Class" => "0.08",
+    "FindBin" => 0,
+    "Test::More" => "0.92"
+  },
+  "VERSION" => "0.01016",
+  "test" => {
+    "TESTS" => "t/*.t"
   }
 );
 

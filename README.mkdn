@@ -4,7 +4,7 @@ Test::DBIx::Class::Schema
 
 # VERSION
 
-version 0.01015
+version 0.01016
 
 # SYNOPSIS
 
@@ -28,6 +28,9 @@ Create a test script that looks like this:
             # optional
             username  => 'some_user',
             password  => 'opensesame',
+            # rather than calling diag will test that all columns/relationships
+            # are accounted for in your test and fail the test if not
+            test_missing => 1,
         }
     );
 
@@ -108,6 +111,7 @@ Test::DBIx::Class::Schema - DBIx::Class schema sanity checking tests
 
 Gianni Ceccarelli `<dakkar@thenautilus.net>`,
 Darius Jokilehto
+Jason Tang `<tang.jason.ch@gmail.com>`,
 
 # AUTHOR
 

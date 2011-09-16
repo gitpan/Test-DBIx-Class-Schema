@@ -1,5 +1,5 @@
 This file contains message digests of all files listed in MANIFEST,
-signed via the Module::Signature module, version 0.55.
+signed via the Module::Signature module, version 0.68.
 
 To verify the content in this distribution, first make sure you have
 Module::Signature installed, then type:
@@ -14,28 +14,30 @@ not run its Makefile.PL or Build.PL.
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-SHA1 fb9ddf3c8eb7a7863ca39a8a01ba3ab2c2ec1b82 Changes
-SHA1 2a26f86001318a1afdf7b3aa074c56e67b66b826 LICENSE
-SHA1 04f7670d6ba1a17aff8ba05d79601a165874fbf3 MANIFEST
-SHA1 dccbc0429c3126afda892309457e8a21365feeef META.yml
-SHA1 6477482bd6d80618f66339584c7f9113525baeab Makefile.PL
-SHA1 d0d4faec761203a433951a752706dc9be677506d README
-SHA1 d96fe5c26cec3bd32fc8d98abd0dcb1766b80097 README.mkdn
-SHA1 8247476716ae9989ae5fd28ec6194bc7013f7f21 dist.ini
+SHA1 3979072c84c1d99fd4b7e20d35edd5d016717a02 Changes
+SHA1 674038baa02a51cc6f56ee3dae2479ff0a71e432 LICENSE
+SHA1 4605be20b561ec6f3bc740973b271a495e57df3c MANIFEST
+SHA1 b694f2ca695e3852f22f7e6b7677a5f575058f49 META.yml
+SHA1 f838a939a35e1a32697af6e4ed5543ad1cea412b Makefile.PL
+SHA1 9d626fe36dbafd077f045feb28cadb7e717b01e3 README
+SHA1 9751fdfa6fcd88457b1a0b0ceeb5a69c0838fc33 README.mkdn
+SHA1 1c5f0169ee96689b372ffc7acefa155dce9e1f32 dist.ini
 SHA1 91e978217f924a308a076c49f8ab4d56dbc6febc docs/SubmittingPatches.pod
-SHA1 9e18b086ebd18714a7451334540d04cb9b121666 lib/Test/DBIx/Class/Schema.pm
+SHA1 6cd87ea27846eedef2424c7fb4b8e4c501f27c58 lib/Test/DBIx/Class/Schema.pm
 SHA1 820501b5591b35b12062ab4aed104d221530356e t/10.test.dbix.class.schema.t
 SHA1 c621d1ef0b3604a8e81603de116f4adfa3cefa67 t/11.testdata.t
-SHA1 f853b97bb91ea4936b3dfee0723c62ac00299ae2 t/20.run_tests.artist.t
+SHA1 5774aa6a464d2d9a02faff1de75ace08d08a9b76 t/20.run_tests.artist.t
 SHA1 fa9d7192e1bfcb7f1d49ced6ea1cfd6f692cf7f9 t/20.run_tests.cd.t
 SHA1 c89a88d3e6f20ee0519d6c291082fc26c39cfcdc t/20.run_tests.compound_fk.t
 SHA1 8673763c76ef77d4191f12fd027fe2ec40a22ca7 t/20.run_tests.person.t
-SHA1 68dbaa337321866bc9634c7177ab5c408b0c304a t/20.run_tests.proxy.t
-SHA1 c867b12becd19574af39fd62766787b9e747f36a t/20.run_tests.track.t
+SHA1 0f44ff5f44669728359817daefc2c9d03f68b44b t/20.run_tests.proxy.t
+SHA1 d5aaa84174afb5bd9419e9b9116aef9aa6ffa79d t/20.run_tests.track.t
 SHA1 68d6c3337510b776ed1259aad4563f71dc0e492c t/30.failing_tests.artist.t
 SHA1 2f538fe5829bd5d992c4a0c94ff027e8086f1d0e t/30.failing_tests.cd.t
 SHA1 4f49a9ad0ee19a66fe5920b48c6ca64d2b953032 t/30.failing_tests.track.t
-SHA1 858420ccb0e9ac562203f496e63469f73667d29a t/lib/TDCSTest.pm
+SHA1 6bb06710e934a3457a17d3ccfb3da0239389ccc5 t/40.untested.columns.t
+SHA1 c0680b9f26d83afb1173e0e9ee7d95f54c1153af t/lib/DBHelper.pm
+SHA1 fb56b1f84a45bdaafd17069e1cedb4a99b049217 t/lib/TDCSTest.pm
 SHA1 46a0635aeaba980e670e71e3c7ff3ae757499b28 t/lib/TDCSTest/Schema.pm
 SHA1 dfa236304f4d4529c140de8148613c970dd40546 t/lib/TDCSTest/Schema/Artist.pm
 SHA1 a43fb4f05c77be2a1241ccae46b99525f53db96b t/lib/TDCSTest/Schema/Audiophile.pm
@@ -45,15 +47,20 @@ SHA1 7551e7aa4ca8e43e7904cebcc0a891eb89aee918 t/lib/TDCSTest/Schema/CDShopAudiop
 SHA1 52f7371ee6364959268cec0168af82471db44fa4 t/lib/TDCSTest/Schema/Person.pm
 SHA1 a5a64ff6e237acb01efabf1c83ef961c9fbeb0fa t/lib/TDCSTest/Schema/Shop.pm
 SHA1 7725aff0e2b19873360898308a37d7fb1221ef85 t/lib/TDCSTest/Schema/Track.pm
+SHA1 308ada1f0090658c464bfdfaa05115fc0ae1ab80 t/lib/UnexpectedTest.pm
+SHA1 20be9dd34045a2aad6dfcd0dab34b619c4a0aeb0 t/lib/UnexpectedTest/Schema.pm
+SHA1 8fd198ec8c12b39911de1daf3e01d238a9dedb60 t/lib/UnexpectedTest/Schema/Result/SpanishInquisition.pm
 SHA1 07b7aceb44d6efd8f4731e1afa8634ee2127cd45 t/lib/sqlite.sql
+SHA1 c09cac90d78fb18845043f7f87274260f7c22d78 t/lib/unexpected.sqlite.sql
 SHA1 0068bf52fc88b39cc6509199f19a77890edb9bb0 t/release-has-version.t
 SHA1 455d1dd1867212a665ad5ea4126b572411de300c t/release-no-tabs.t
 SHA1 b30cbdfaf935017c4568c0c91b242438cb87786e t/release-pod-syntax.t
-SHA1 a4a58ff41a26a446d525d6aa86073d23cca5705b t/var/DBIxClass.db
+SHA1 eb9b6fa273d2f4c498f041cff96e046f5e5abfbf t/var/DBIxClass.db
+SHA1 1049ee23670b954c6a30d646210af971b78d03d6 t/var/unexpected.db
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.10 (GNU/Linux)
+Version: GnuPG v1.4.5 (GNU/Linux)
 
-iEYEARECAAYFAk1nq5YACgkQh4j7xTiFuxE3HACgxSDzZ2ZMPOA8xBPMMaqukWTU
-mpMAn2qz1JOw+fbLxlJK5dnNy54c7V0U
-=0pv1
+iD8DBQFOc3KRh4j7xTiFuxERAqVcAJ44immvZk8puOsr/iSayyDbiG4mIgCcDhT1
+J53izKKK8rO1E4CNuRyAWPw=
+=opN2
 -----END PGP SIGNATURE-----

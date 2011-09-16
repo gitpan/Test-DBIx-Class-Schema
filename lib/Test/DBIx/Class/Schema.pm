@@ -1,8 +1,8 @@
 package Test::DBIx::Class::Schema;
-BEGIN {
-  $Test::DBIx::Class::Schema::VERSION = '0.01015';
+{
+  $Test::DBIx::Class::Schema::VERSION = '0.01016';
 }
-BEGIN {
+{
   $Test::DBIx::Class::Schema::DIST = 'Test-DBIx-Class-Schema';
 }
 # vim: ts=8 sts=4 et sw=4 sr sta
@@ -64,15 +64,27 @@ sub run_tests {
         );
     }
     else {
-        isa_ok($record, $self->{namespace} . '::' . $self->{moniker});
+        # It looks like the namespace has changed with newer record objects so
+        # that they don't get ::Schema in their name.
+        # So that wew can work with either we now want our record to be the
+        # namespace+moniker with an option '::Schema' in the name.
+        # This means moving away from isa_ok() to like() on a ref()
+        my $expected_type_re = $self->{namespace} . '::' . $self->{moniker};
+           $expected_type_re =~ s{::Schema}{(?:::Schema)?};
+        my $regexp = qr{$expected_type_re};
+        like(ref($record), $regexp, "The record object is a ::$self->{moniker}");
     }
 
     $self->_test_normal_methods($rs);
     $self->_test_special_methods($record);
     $self->_test_resultset_methods($rs);
+    $self->_test_unexpected_normal_methods($rs);
 
+    # TODO: test custom, resultsets
+
+    my $tb = Test::More->builder;
     done_testing
-        unless $ENV{TEST_AGGREGATE};
+        unless ($tb->{Done_Testing} || $ENV{TEST_AGGREGATE});
 }
 
 sub _test_normal_methods {
@@ -213,6 +225,54 @@ sub _test_methods {
     return;
 }
 
+sub _test_unexpected_normal_methods {
+    my($self,$rs) = @_;
+    my $source    = $rs->result_source;
+
+    my $set = {
+        'columns'   => [ $source->columns ],
+        'relations' => [ $source->relationships ],
+    };
+
+    foreach my $method_type (sort keys %{$set}) {
+        my @diff = $self->_diff_arrays(
+            $self->{methods}->{$method_type},
+            $set->{$method_type},
+        );
+
+        if ($self->{test_missing}) {
+            is(scalar @diff, 0, "All known $method_type defined in test")
+                || diag "defined in "
+                    . $self->{moniker}
+                    . " but untested: "
+                    . join(', ',@diff);
+        }
+        else {
+            if (scalar @diff) {
+               diag "'$method_type' method(s) defined in "
+                . $self->{moniker}
+                . " but untested: "
+                . join(', ',@diff);
+            }
+        }
+    }
+}
+
+sub _diff_arrays {
+    my($self,$min,$full) = @_;
+    my @min = @{$min};
+    my @full = @{$full};
+
+    my %mapped = map{ $_ => 1 } @min;
+    my @diff = grep (!defined $mapped{$_}, @full);
+
+    if (wantarray) {
+        return @diff;
+    }
+    return \@diff;
+}
+
+
 1;
 
 
@@ -224,7 +284,7 @@ Test::DBIx::Class::Schema
 
 =head1 VERSION
 
-version 0.01015
+version 0.01016
 
 =head1 SYNOPSIS
 
@@ -248,6 +308,9 @@ Create a test script that looks like this:
             # optional
             username  => 'some_user',
             password  => 'opensesame',
+            # rather than calling diag will test that all columns/relationships
+            # are accounted for in your test and fail the test if not
+            test_missing => 1,
         }
     );
 
@@ -328,6 +391,7 @@ L<Test::Aggregate>
 
 Gianni Ceccarelli C<< <dakkar@thenautilus.net> >>,
 Darius Jokilehto
+Jason Tang C<< <tang.jason.ch@gmail.com> >>,
 
 =head1 AUTHOR
 
