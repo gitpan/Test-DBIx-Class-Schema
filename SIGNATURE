@@ -14,16 +14,16 @@ not run its Makefile.PL or Build.PL.
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-SHA1 3979072c84c1d99fd4b7e20d35edd5d016717a02 Changes
-SHA1 674038baa02a51cc6f56ee3dae2479ff0a71e432 LICENSE
+SHA1 6629e0d64e7a2dadcb691c3ff03213abfa7abf13 Changes
+SHA1 20a111f37382cd1957ca05c8ab4b85d526679129 LICENSE
 SHA1 4605be20b561ec6f3bc740973b271a495e57df3c MANIFEST
-SHA1 b694f2ca695e3852f22f7e6b7677a5f575058f49 META.yml
-SHA1 f838a939a35e1a32697af6e4ed5543ad1cea412b Makefile.PL
-SHA1 9d626fe36dbafd077f045feb28cadb7e717b01e3 README
-SHA1 9751fdfa6fcd88457b1a0b0ceeb5a69c0838fc33 README.mkdn
-SHA1 1c5f0169ee96689b372ffc7acefa155dce9e1f32 dist.ini
+SHA1 63b9b9d646e245ad9ab49251c0843ca1006d4328 META.yml
+SHA1 50844d62d54de5608481220b0d53af439107e4ae Makefile.PL
+SHA1 bd8b6695d6d988a175a820ba8fd9f74010e1efd7 README
+SHA1 9282e288efe2c066f1d26b19a9a5bcaa2da09170 README.mkdn
+SHA1 9bb6d899c27d91425728f8d65b36e635658113ce dist.ini
 SHA1 91e978217f924a308a076c49f8ab4d56dbc6febc docs/SubmittingPatches.pod
-SHA1 6cd87ea27846eedef2424c7fb4b8e4c501f27c58 lib/Test/DBIx/Class/Schema.pm
+SHA1 424a24d67e1195df6fdcf21b2a9fd992ecd1bb8d lib/Test/DBIx/Class/Schema.pm
 SHA1 820501b5591b35b12062ab4aed104d221530356e t/10.test.dbix.class.schema.t
 SHA1 c621d1ef0b3604a8e81603de116f4adfa3cefa67 t/11.testdata.t
 SHA1 5774aa6a464d2d9a02faff1de75ace08d08a9b76 t/20.run_tests.artist.t
@@ -35,7 +35,7 @@ SHA1 d5aaa84174afb5bd9419e9b9116aef9aa6ffa79d t/20.run_tests.track.t
 SHA1 68d6c3337510b776ed1259aad4563f71dc0e492c t/30.failing_tests.artist.t
 SHA1 2f538fe5829bd5d992c4a0c94ff027e8086f1d0e t/30.failing_tests.cd.t
 SHA1 4f49a9ad0ee19a66fe5920b48c6ca64d2b953032 t/30.failing_tests.track.t
-SHA1 6bb06710e934a3457a17d3ccfb3da0239389ccc5 t/40.untested.columns.t
+SHA1 d5de118a29fddefce63f37fa9ba364455f807c1a t/40.untested.columns.t
 SHA1 c0680b9f26d83afb1173e0e9ee7d95f54c1153af t/lib/DBHelper.pm
 SHA1 fb56b1f84a45bdaafd17069e1cedb4a99b049217 t/lib/TDCSTest.pm
 SHA1 46a0635aeaba980e670e71e3c7ff3ae757499b28 t/lib/TDCSTest/Schema.pm
@@ -60,7 +60,7 @@ SHA1 1049ee23670b954c6a30d646210af971b78d03d6 t/var/unexpected.db
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.5 (GNU/Linux)
 
-iD8DBQFOc3KRh4j7xTiFuxERAqVcAJ44immvZk8puOsr/iSayyDbiG4mIgCcDhT1
-J53izKKK8rO1E4CNuRyAWPw=
-=opN2
+iD8DBQFPxPIdh4j7xTiFuxERApwaAKCAfCjzp/5sGdDt2tCNpvZu78dcZwCghcMN
+MRxgS6VIYSCWwlYkbGRxSR0=
+=SoOZ
 -----END PGP SIGNATURE-----

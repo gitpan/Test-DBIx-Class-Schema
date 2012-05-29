@@ -1,10 +1,10 @@
 # NAME
 
-Test::DBIx::Class::Schema
+Test::DBIx::Class::Schema - DBIx::Class schema sanity checking tests
 
 # VERSION
 
-version 0.01016
+version 1.0.0
 
 # SYNOPSIS
 
@@ -71,9 +71,9 @@ Create a test script that looks like this:
 
 Run the test script:
 
-  prove -l t/schematest/xx.mydb.t
+    prove -l t/schematest/xx.mydb.t
 
-## done_testing
+## done\_testing
 
 Under normal circumstances there is no need to add `done_testing` to your
 test script; it's automatically called at the end of `run_tests()` _unless_
@@ -81,7 +81,7 @@ you are running tests under [Test::Aggregate](http://search.cpan.org/perldoc?Tes
 
 If you are running aggregated tests you will need to add
 
-  done_testing;
+    done_testing;
 
 to your top-level script.
 
@@ -97,10 +97,6 @@ As a lazy person myself I don't want to write numerous near-identical scripts.
 
 Test::DBIx::Class::Schema takes the copy-and-paste out of DBIC schema class testing.
 
-# NAME
-
-Test::DBIx::Class::Schema - DBIx::Class schema sanity checking tests
-
 # SEE ALSO
 
 [DBIx::Class](http://search.cpan.org/perldoc?DBIx::Class),
@@ -110,8 +106,8 @@ Test::DBIx::Class::Schema - DBIx::Class schema sanity checking tests
 # CONTRIBUTORS
 
 Gianni Ceccarelli `<dakkar@thenautilus.net>`,
-Darius Jokilehto
-Jason Tang `<tang.jason.ch@gmail.com>`,
+Darius Jokilehto,
+Jason Tang `<tang.jason.ch@gmail.com>`
 
 # AUTHOR
 
@@ -119,7 +115,7 @@ Chisel Wright <chisel@chizography.net>
 
 # COPYRIGHT AND LICENSE
 
-This software is copyright (c) 2011 by Chisel Wright.
+This software is copyright (c) 2012 by Chisel Wright.
 
 This is free software; you can redistribute it and/or modify it under
 the same terms as the Perl 5 programming language system itself.

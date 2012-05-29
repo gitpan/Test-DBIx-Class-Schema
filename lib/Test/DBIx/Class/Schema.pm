@@ -1,6 +1,6 @@
 package Test::DBIx::Class::Schema;
 {
-  $Test::DBIx::Class::Schema::VERSION = '0.01016';
+  $Test::DBIx::Class::Schema::VERSION = '1.0.0';
 }
 {
   $Test::DBIx::Class::Schema::DIST = 'Test-DBIx-Class-Schema';
@@ -240,19 +240,23 @@ sub _test_unexpected_normal_methods {
             $set->{$method_type},
         );
 
+        my $plural = (scalar @diff == 1) ? '' : 's';
+        my $message =
+            qq{'$method_type' method${plural} defined in }
+            . $self->{moniker}
+            . ' but untested: '
+            . join(', ',@diff);
+
         if ($self->{test_missing}) {
-            is(scalar @diff, 0, "All known $method_type defined in test")
-                || diag "defined in "
-                    . $self->{moniker}
-                    . " but untested: "
-                    . join(', ',@diff);
+            is_deeply(
+                \@diff,
+                [],
+                "All known $method_type method${plural} defined in test"
+            ) || diag $message;
         }
         else {
             if (scalar @diff) {
-               diag "'$method_type' method(s) defined in "
-                . $self->{moniker}
-                . " but untested: "
-                . join(', ',@diff);
+               diag $message;
             }
         }
     }
@@ -274,17 +278,18 @@ sub _diff_arrays {
 
 
 1;
+# ABSTRACT: DBIx::Class schema sanity checking tests
 
 
 =pod
 
 =head1 NAME
 
-Test::DBIx::Class::Schema
+Test::DBIx::Class::Schema - DBIx::Class schema sanity checking tests
 
 =head1 VERSION
 
-version 0.01016
+version 1.0.0
 
 =head1 SYNOPSIS
 
@@ -377,10 +382,6 @@ As a lazy person myself I don't want to write numerous near-identical scripts.
 
 Test::DBIx::Class::Schema takes the copy-and-paste out of DBIC schema class testing.
 
-=head1 NAME
-
-Test::DBIx::Class::Schema - DBIx::Class schema sanity checking tests
-
 =head1 SEE ALSO
 
 L<DBIx::Class>,
@@ -390,8 +391,8 @@ L<Test::Aggregate>
 =head1 CONTRIBUTORS
 
 Gianni Ceccarelli C<< <dakkar@thenautilus.net> >>,
-Darius Jokilehto
-Jason Tang C<< <tang.jason.ch@gmail.com> >>,
+Darius Jokilehto,
+Jason Tang C<< <tang.jason.ch@gmail.com> >>
 
 =head1 AUTHOR
 
@@ -399,7 +400,7 @@ Chisel Wright <chisel@chizography.net>
 
 =head1 COPYRIGHT AND LICENSE
 
-This software is copyright (c) 2011 by Chisel Wright.
+This software is copyright (c) 2012 by Chisel Wright.
 
 This is free software; you can redistribute it and/or modify it under
 the same terms as the Perl 5 programming language system itself.
