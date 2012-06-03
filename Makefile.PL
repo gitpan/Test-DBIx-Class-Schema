@@ -12,8 +12,13 @@ my %WriteMakefileArgs = (
   "ABSTRACT" => "DBIx::Class schema sanity checking tests",
   "AUTHOR" => "Chisel Wright <chisel\@chizography.net>",
   "BUILD_REQUIRES" => {
+    "Carp" => 0,
+    "DBIx::Class::Core" => 0,
+    "DBIx::Class::Schema" => 0,
     "Test::Builder::Tester" => 0,
-    "Test::More" => "0.92"
+    "Test::More" => "0.92",
+    "base" => 0,
+    "parent" => 0
   },
   "CONFIGURE_REQUIRES" => {
     "ExtUtils::MakeMaker" => "6.30"
@@ -25,9 +30,11 @@ my %WriteMakefileArgs = (
   "PREREQ_PM" => {
     "DBIx::Class" => "0.08",
     "FindBin" => 0,
-    "Test::More" => "0.92"
+    "Test::More" => "0.92",
+    "strict" => 0,
+    "warnings" => 0
   },
-  "VERSION" => "1.0.0",
+  "VERSION" => "1.0.1",
   "test" => {
     "TESTS" => "t/*.t"
   }

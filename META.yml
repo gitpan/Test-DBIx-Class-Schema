@@ -3,8 +3,13 @@ abstract: 'DBIx::Class schema sanity checking tests'
 author:
   - 'Chisel Wright <chisel@chizography.net>'
 build_requires:
+  Carp: 0
+  DBIx::Class::Core: 0
+  DBIx::Class::Schema: 0
   Test::Builder::Tester: 0
   Test::More: 0.92
+  base: 0
+  parent: 0
 configure_requires:
   ExtUtils::MakeMaker: 6.30
 dynamic_config: 0
@@ -18,7 +23,9 @@ requires:
   DBIx::Class: 0.08
   FindBin: 0
   Test::More: 0.92
+  strict: 0
+  warnings: 0
 resources:
   bugtracker: http://rt.cpan.org/Public/Dist/Display.html?Name=Test-DBIx-Class-Schema
   repository: git://github.com/chiselwright/test-dbix-class-schema
-version: 1.0.0
+version: 1.0.1
