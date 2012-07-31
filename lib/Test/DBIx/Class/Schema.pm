@@ -1,6 +1,6 @@
 package Test::DBIx::Class::Schema;
 {
-  $Test::DBIx::Class::Schema::VERSION = '1.0.1';
+  $Test::DBIx::Class::Schema::VERSION = '1.0.2';
 }
 {
   $Test::DBIx::Class::Schema::DIST = 'Test-DBIx-Class-Schema';
@@ -118,7 +118,15 @@ sub _test_normal_methods {
                     # test self.* and foreign.* columns are valid
                     my $cond_ref = $source->relationship_info($method)->{cond};
                     $cond_ref = ref $cond_ref eq 'ARRAY' ? $cond_ref : [ $cond_ref ];
-                    foreach my $cond ( @$cond_ref ) {
+                    COND: foreach my $cond ( @$cond_ref ) {
+                        # you can have CODE as the cond_ref - that's unexpected!
+                        TODO: {
+                            if ('CODE' eq ref($cond)) {
+                                local $TODO = qq{skipping column tests for CODE defined condition};
+                                fail(qq{test '$method' with CODE definition});
+                                next COND;
+                            }
+                        }
                         foreach my $foreign_col (keys %{$cond} ) {
                             my $self_col = $cond->{$foreign_col};
                             s{^\w+\.}{} for ( $self_col, $foreign_col );
@@ -289,7 +297,7 @@ Test::DBIx::Class::Schema - DBIx::Class schema sanity checking tests
 
 =head1 VERSION
 
-version 1.0.1
+version 1.0.2
 
 =head1 SYNOPSIS
 

@@ -28,4 +28,4 @@ requires:
 resources:
   bugtracker: http://rt.cpan.org/Public/Dist/Display.html?Name=Test-DBIx-Class-Schema
   repository: git://github.com/chiselwright/test-dbix-class-schema
-version: 1.0.1
+version: 1.0.2

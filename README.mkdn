@@ -4,7 +4,7 @@ Test::DBIx::Class::Schema - DBIx::Class schema sanity checking tests
 
 # VERSION
 
-version 1.0.1
+version 1.0.2
 
 # SYNOPSIS
 
