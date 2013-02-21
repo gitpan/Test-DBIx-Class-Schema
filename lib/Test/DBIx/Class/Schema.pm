@@ -1,6 +1,6 @@
 package Test::DBIx::Class::Schema;
 {
-  $Test::DBIx::Class::Schema::VERSION = '1.0.2';
+  $Test::DBIx::Class::Schema::VERSION = '1.0.3';
 }
 {
   $Test::DBIx::Class::Schema::DIST = 'Test-DBIx-Class-Schema';
@@ -288,6 +288,7 @@ sub _diff_arrays {
 1;
 # ABSTRACT: DBIx::Class schema sanity checking tests
 
+__END__
 
 =pod
 
@@ -297,7 +298,7 @@ Test::DBIx::Class::Schema - DBIx::Class schema sanity checking tests
 
 =head1 VERSION
 
-version 1.0.2
+version 1.0.3
 
 =head1 SYNOPSIS
 
@@ -315,12 +316,13 @@ Create a test script that looks like this:
     my $schematest = Test::DBIx::Class::Schema->new(
         {
             # required
-            dsn       => 'dbi:Pg:dbname=mydb',
+            dsn       => 'dbi:Pg:dbname=mydb', # or use schema option
             namespace => 'MyDB::Schema',
             moniker   => 'SomeTable',
             # optional
             username  => 'some_user',
             password  => 'opensesame',
+            glue      => 'Result',             # fix class name if needed
             # rather than calling diag will test that all columns/relationships
             # are accounted for in your test and fail the test if not
             test_missing => 1,
@@ -366,6 +368,23 @@ Run the test script:
 
   prove -l t/schematest/xx.mydb.t
 
+=head2 Options
+
+Either C<dsn> (eg C<dbi:Pg:dbname=mydb>) or C<schema> (an already
+created schema object) must be set.
+
+If the database requires credentials, set C<username> and C<password>.
+
+C<namespace>, C<glue> and C<moniker> define the class being tested.
+For example, if your class is C<MyDB::Schema::Result::SomeTable> then use:
+
+  namespace => 'MyDB::Schema',
+  glue      => 'Result,
+  moniker   => 'SomeTable',
+
+C<glue> is not required if the combination of C<namespace> and C<moniker>
+is enough to define the class, e.g. C<MyDB::Schema::SomeTable>.
+
 =head2 done_testing
 
 Under normal circumstances there is no need to add C<done_testing> to your
@@ -400,7 +419,8 @@ L<Test::Aggregate>
 
 Gianni Ceccarelli C<< <dakkar@thenautilus.net> >>,
 Darius Jokilehto,
-Jason Tang C<< <tang.jason.ch@gmail.com> >>
+Jason Tang C<< <tang.jason.ch@gmail.com> >>,
+Rupert Lane (L<https://github.com/rupertl>)
 
 =head1 AUTHOR
 
@@ -408,13 +428,9 @@ Chisel Wright <chisel@chizography.net>
 
 =head1 COPYRIGHT AND LICENSE
 
-This software is copyright (c) 2012 by Chisel Wright.
+This software is copyright (c) 2013 by Chisel Wright.
 
 This is free software; you can redistribute it and/or modify it under
 the same terms as the Perl 5 programming language system itself.
 
 =cut
-
-
-__END__
-

@@ -40,3 +40,5 @@ t/lib/unexpected.sqlite.sql
 t/release-has-version.t
 t/release-no-tabs.t
 t/release-pod-syntax.t
+t/var/DBIxClass.db
+t/var/unexpected.db
