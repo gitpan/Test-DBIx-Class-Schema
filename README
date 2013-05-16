@@ -2,7 +2,7 @@ NAME
     Test::DBIx::Class::Schema - DBIx::Class schema sanity checking tests
 
 VERSION
-    version 1.0.3
+    version 1.0.4
 
 SYNOPSIS
     Create a test script that looks like this:

@@ -14,16 +14,17 @@ not run its Makefile.PL or Build.PL.
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-SHA1 742a9a142192b5e0d392531ca0da0c72d337ffbc Changes
+SHA1 7ad49e31d538352c3c06750fbcc6a15292311f72 Changes
 SHA1 a68cf50735f7b821045517238f60b3c032956372 LICENSE
-SHA1 4605be20b561ec6f3bc740973b271a495e57df3c MANIFEST
-SHA1 ef4b5504dbd1a16b2d6c8275f7dd135e6d8b56b6 META.yml
-SHA1 52e68c2e5b2cc8712a06bc7c6557ac26cea4a179 Makefile.PL
-SHA1 a7eec0d9a4565fe885352e9e2f5220d3fa31fe66 README
-SHA1 9de7fbce7285802ff46e73e2d9ff6a69b24ec7ec README.mkdn
-SHA1 abad0b42b892176a04ba8eaff88d410b2e8b0316 dist.ini
+SHA1 b23f2d017d1d5506ac302bfc1d9d941915f508b8 MANIFEST
+SHA1 66584571f5bfc55dd0671f73475bf30ec9e32ced META.json
+SHA1 75f72f8f465e512b7377fad5eb220d6473cee7fd META.yml
+SHA1 0fc08733e05044a911dd1d4c5eb165fc424c03dc Makefile.PL
+SHA1 1a5156185d3e2944959e5a46067e55796c8220bb README
+SHA1 cfd8d2d7e6b72586845f405bcf819f7c1bf9797b README.mkdn
+SHA1 12ec739fdceaa6036c83b26b2c0f97da17b7df42 dist.ini
 SHA1 91e978217f924a308a076c49f8ab4d56dbc6febc docs/SubmittingPatches.pod
-SHA1 764cca07a5c2e8631c98df09089ae31e26d80bfc lib/Test/DBIx/Class/Schema.pm
+SHA1 cf5caf58f7fbfbb97f22f874fb29ab6deb50323c lib/Test/DBIx/Class/Schema.pm
 SHA1 820501b5591b35b12062ab4aed104d221530356e t/10.test.dbix.class.schema.t
 SHA1 c621d1ef0b3604a8e81603de116f4adfa3cefa67 t/11.testdata.t
 SHA1 5774aa6a464d2d9a02faff1de75ace08d08a9b76 t/20.run_tests.artist.t
@@ -36,7 +37,7 @@ SHA1 68d6c3337510b776ed1259aad4563f71dc0e492c t/30.failing_tests.artist.t
 SHA1 2f538fe5829bd5d992c4a0c94ff027e8086f1d0e t/30.failing_tests.cd.t
 SHA1 4f49a9ad0ee19a66fe5920b48c6ca64d2b953032 t/30.failing_tests.track.t
 SHA1 d5de118a29fddefce63f37fa9ba364455f807c1a t/40.untested.columns.t
-SHA1 c0680b9f26d83afb1173e0e9ee7d95f54c1153af t/lib/DBHelper.pm
+SHA1 af9f2b59cca4fcf130deefd45072e2248d1ff975 t/lib/DBHelper.pm
 SHA1 fb56b1f84a45bdaafd17069e1cedb4a99b049217 t/lib/TDCSTest.pm
 SHA1 46a0635aeaba980e670e71e3c7ff3ae757499b28 t/lib/TDCSTest/Schema.pm
 SHA1 dfa236304f4d4529c140de8148613c970dd40546 t/lib/TDCSTest/Schema/Artist.pm
@@ -51,16 +52,14 @@ SHA1 308ada1f0090658c464bfdfaa05115fc0ae1ab80 t/lib/UnexpectedTest.pm
 SHA1 20be9dd34045a2aad6dfcd0dab34b619c4a0aeb0 t/lib/UnexpectedTest/Schema.pm
 SHA1 8fd198ec8c12b39911de1daf3e01d238a9dedb60 t/lib/UnexpectedTest/Schema/Result/SpanishInquisition.pm
 SHA1 07b7aceb44d6efd8f4731e1afa8634ee2127cd45 t/lib/sqlite.sql
-SHA1 c09cac90d78fb18845043f7f87274260f7c22d78 t/lib/unexpected.sqlite.sql
+SHA1 4adcc825f92e81f87f1154c7eeec0d899d3f4f2e t/lib/unexpected.sqlite.sql
 SHA1 0068bf52fc88b39cc6509199f19a77890edb9bb0 t/release-has-version.t
 SHA1 455d1dd1867212a665ad5ea4126b572411de300c t/release-no-tabs.t
 SHA1 b30cbdfaf935017c4568c0c91b242438cb87786e t/release-pod-syntax.t
-SHA1 eb9b6fa273d2f4c498f041cff96e046f5e5abfbf t/var/DBIxClass.db
-SHA1 1049ee23670b954c6a30d646210af971b78d03d6 t/var/unexpected.db
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.5 (GNU/Linux)
 
-iD8DBQFRJkMnh4j7xTiFuxERAgV3AJ4tSJ99V37tObRXaNNAA8oiYpDWcQCeIKNb
-ahNJ1j7ghwUhRfu/7CGR5d8=
-=p9rC
+iD8DBQFRlQfdh4j7xTiFuxERArgGAJ9xR+P57iEgYe3m/i4mAJ60teOl3ACZAVEm
+atwUvaxwU6GkNUdLlT+me08=
+=/ic/
 -----END PGP SIGNATURE-----
