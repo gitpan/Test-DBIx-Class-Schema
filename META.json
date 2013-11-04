@@ -4,7 +4,7 @@
       "Chisel Wright <chisel@chizography.net>"
    ],
    "dynamic_config" : 0,
-   "generated_by" : "Dist::Zilla version 4.300034, CPAN::Meta::Converter version 2.130880",
+   "generated_by" : "Dist::Zilla version 4.300039, CPAN::Meta::Converter version 2.120921",
    "license" : [
       "perl_5"
    ],
@@ -39,8 +39,10 @@
             "DBIx::Class::Core" : "0",
             "DBIx::Class::Schema" : "0",
             "Test::Builder::Tester" : "0",
+            "Test::Exception" : "0",
             "Test::More" : "0.92",
             "base" : "0",
+            "lib" : "0",
             "parent" : "0"
          }
       }
@@ -52,10 +54,9 @@
       },
       "repository" : {
          "type" : "git",
-         "url" : "git://github.com/chiselwright/test-dbix-class-schema.git",
-         "web" : "https://github.com/chiselwright/test-dbix-class-schema"
+         "url" : "git://github.com/chiselwright/test-dbix-class-schema"
       }
    },
-   "version" : "1.0.4"
+   "version" : "1.0.5"
 }
 

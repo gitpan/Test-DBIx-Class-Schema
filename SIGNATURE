@@ -1,5 +1,5 @@
 This file contains message digests of all files listed in MANIFEST,
-signed via the Module::Signature module, version 0.70.
+signed via the Module::Signature module, version 0.73.
 
 To verify the content in this distribution, first make sure you have
 Module::Signature installed, then type:
@@ -14,17 +14,17 @@ not run its Makefile.PL or Build.PL.
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-SHA1 7ad49e31d538352c3c06750fbcc6a15292311f72 Changes
+SHA1 0174cbf88259a1c4e0cce81163f3841ac0ce97bd Changes
 SHA1 a68cf50735f7b821045517238f60b3c032956372 LICENSE
-SHA1 b23f2d017d1d5506ac302bfc1d9d941915f508b8 MANIFEST
-SHA1 66584571f5bfc55dd0671f73475bf30ec9e32ced META.json
-SHA1 75f72f8f465e512b7377fad5eb220d6473cee7fd META.yml
-SHA1 0fc08733e05044a911dd1d4c5eb165fc424c03dc Makefile.PL
-SHA1 1a5156185d3e2944959e5a46067e55796c8220bb README
-SHA1 cfd8d2d7e6b72586845f405bcf819f7c1bf9797b README.mkdn
-SHA1 12ec739fdceaa6036c83b26b2c0f97da17b7df42 dist.ini
+SHA1 b88d51a27aef82e34733e2b7123264d13f27c0f8 MANIFEST
+SHA1 f39b066fb88ff5c4cf46bcbedbe8044e1c35430d META.json
+SHA1 e43e50d8c6323eed8131e473e9ce086f89c5b4e4 META.yml
+SHA1 207419348612a6d1141de4df6fe67cf9977a42a9 Makefile.PL
+SHA1 11585ffed846e4ddbbae5ae954cf9df2400a5cb9 README
+SHA1 50c9ef85e7c4061f381456051660b9a4da063f40 README.mkdn
+SHA1 90ef948693f50e0ab0b87c6b1807cc16b0df7148 dist.ini
 SHA1 91e978217f924a308a076c49f8ab4d56dbc6febc docs/SubmittingPatches.pod
-SHA1 cf5caf58f7fbfbb97f22f874fb29ab6deb50323c lib/Test/DBIx/Class/Schema.pm
+SHA1 f79088240d6d341d210beabbaaf5788a06eedadd lib/Test/DBIx/Class/Schema.pm
 SHA1 820501b5591b35b12062ab4aed104d221530356e t/10.test.dbix.class.schema.t
 SHA1 c621d1ef0b3604a8e81603de116f4adfa3cefa67 t/11.testdata.t
 SHA1 5774aa6a464d2d9a02faff1de75ace08d08a9b76 t/20.run_tests.artist.t
@@ -36,6 +36,7 @@ SHA1 d5aaa84174afb5bd9419e9b9116aef9aa6ffa79d t/20.run_tests.track.t
 SHA1 68d6c3337510b776ed1259aad4563f71dc0e492c t/30.failing_tests.artist.t
 SHA1 2f538fe5829bd5d992c4a0c94ff027e8086f1d0e t/30.failing_tests.cd.t
 SHA1 4f49a9ad0ee19a66fe5920b48c6ca64d2b953032 t/30.failing_tests.track.t
+SHA1 a3a8da67959b3a307d1b16fdac71f71e98dbcbdb t/30.missing_methods.t
 SHA1 d5de118a29fddefce63f37fa9ba364455f807c1a t/40.untested.columns.t
 SHA1 af9f2b59cca4fcf130deefd45072e2248d1ff975 t/lib/DBHelper.pm
 SHA1 fb56b1f84a45bdaafd17069e1cedb4a99b049217 t/lib/TDCSTest.pm
@@ -56,10 +57,12 @@ SHA1 4adcc825f92e81f87f1154c7eeec0d899d3f4f2e t/lib/unexpected.sqlite.sql
 SHA1 0068bf52fc88b39cc6509199f19a77890edb9bb0 t/release-has-version.t
 SHA1 455d1dd1867212a665ad5ea4126b572411de300c t/release-no-tabs.t
 SHA1 b30cbdfaf935017c4568c0c91b242438cb87786e t/release-pod-syntax.t
+SHA1 35025c891201fc001ee28298414525b598e7398b t/var/DBIxClass.db
+SHA1 1049ee23670b954c6a30d646210af971b78d03d6 t/var/unexpected.db
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.5 (GNU/Linux)
 
-iD8DBQFRlQfdh4j7xTiFuxERArgGAJ9xR+P57iEgYe3m/i4mAJ60teOl3ACZAVEm
-atwUvaxwU6GkNUdLlT+me08=
-=/ic/
+iD8DBQFSd8pEh4j7xTiFuxERAhQFAJ9H/KJVUNYlOfx8nD4ukf6zmqTYlACgs4JP
+ud5qjrcFjc1CYrxpFEd49TU=
+=aoyK
 -----END PGP SIGNATURE-----

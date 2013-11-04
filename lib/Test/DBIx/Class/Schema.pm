@@ -1,6 +1,6 @@
 package Test::DBIx::Class::Schema;
 {
-  $Test::DBIx::Class::Schema::VERSION = '1.0.4';
+  $Test::DBIx::Class::Schema::VERSION = '1.0.5';
 }
 {
   $Test::DBIx::Class::Schema::DIST = 'Test-DBIx-Class-Schema';
@@ -218,7 +218,9 @@ sub _test_methods {
     foreach my $method_type (@{ $method_types} ) {
         SKIP: {
             skip qq{no $method_type methods}, 1
-                    unless @{ $self->{methods}{$method_type} };
+                    unless 
+                        exists     $self->{methods}{$method_type}
+                           and  @{ $self->{methods}{$method_type} };
             ok(
                 @{ $self->{methods}{$method_type} },
                 qq{$method_type list found for testing}
@@ -298,7 +300,7 @@ Test::DBIx::Class::Schema - DBIx::Class schema sanity checking tests
 
 =head1 VERSION
 
-version 1.0.4
+version 1.0.5
 
 =head1 SYNOPSIS
 

@@ -7,13 +7,15 @@ build_requires:
   DBIx::Class::Core: 0
   DBIx::Class::Schema: 0
   Test::Builder::Tester: 0
+  Test::Exception: 0
   Test::More: 0.92
   base: 0
+  lib: 0
   parent: 0
 configure_requires:
   ExtUtils::MakeMaker: 6.30
 dynamic_config: 0
-generated_by: 'Dist::Zilla version 4.300034, CPAN::Meta::Converter version 2.130880'
+generated_by: 'Dist::Zilla version 4.300039, CPAN::Meta::Converter version 2.120921'
 license: perl
 meta-spec:
   url: http://module-build.sourceforge.net/META-spec-v1.4.html
@@ -27,5 +29,5 @@ requires:
   warnings: 0
 resources:
   bugtracker: http://github.com/chiselwright/Test-DBIx-Class-Schema/issues
-  repository: git://github.com/chiselwright/test-dbix-class-schema.git
-version: 1.0.4
+  repository: git://github.com/chiselwright/test-dbix-class-schema
+version: 1.0.5
