@@ -30,4 +30,4 @@ requires:
 resources:
   bugtracker: http://github.com/chiselwright/Test-DBIx-Class-Schema/issues
   repository: git://github.com/chiselwright/test-dbix-class-schema
-version: 1.0.5
+version: 1.0.6

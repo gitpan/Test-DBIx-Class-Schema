@@ -14,17 +14,17 @@ not run its Makefile.PL or Build.PL.
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-SHA1 0174cbf88259a1c4e0cce81163f3841ac0ce97bd Changes
+SHA1 f5b3a71bbe090f66b271a06f609d481fac9abc8d Changes
 SHA1 a68cf50735f7b821045517238f60b3c032956372 LICENSE
 SHA1 b88d51a27aef82e34733e2b7123264d13f27c0f8 MANIFEST
-SHA1 f39b066fb88ff5c4cf46bcbedbe8044e1c35430d META.json
-SHA1 e43e50d8c6323eed8131e473e9ce086f89c5b4e4 META.yml
-SHA1 207419348612a6d1141de4df6fe67cf9977a42a9 Makefile.PL
-SHA1 11585ffed846e4ddbbae5ae954cf9df2400a5cb9 README
-SHA1 50c9ef85e7c4061f381456051660b9a4da063f40 README.mkdn
+SHA1 c695afba773b2841166d8708e33b366b9d47add5 META.json
+SHA1 c6fa19a0200adce7ff48d86322bdab25516307c4 META.yml
+SHA1 5c6cf0e882ba9d8cc583379b25045c6216ff98ac Makefile.PL
+SHA1 8a7c0e65482920ccf2949c2221e38d89c4e23565 README
+SHA1 0cedb1914af084b037d8e1290f2de79437f4027a README.mkdn
 SHA1 90ef948693f50e0ab0b87c6b1807cc16b0df7148 dist.ini
 SHA1 91e978217f924a308a076c49f8ab4d56dbc6febc docs/SubmittingPatches.pod
-SHA1 f79088240d6d341d210beabbaaf5788a06eedadd lib/Test/DBIx/Class/Schema.pm
+SHA1 d325fe0af21d76b605ceefa23af0552ff74f4a14 lib/Test/DBIx/Class/Schema.pm
 SHA1 820501b5591b35b12062ab4aed104d221530356e t/10.test.dbix.class.schema.t
 SHA1 c621d1ef0b3604a8e81603de116f4adfa3cefa67 t/11.testdata.t
 SHA1 5774aa6a464d2d9a02faff1de75ace08d08a9b76 t/20.run_tests.artist.t
@@ -36,8 +36,8 @@ SHA1 d5aaa84174afb5bd9419e9b9116aef9aa6ffa79d t/20.run_tests.track.t
 SHA1 68d6c3337510b776ed1259aad4563f71dc0e492c t/30.failing_tests.artist.t
 SHA1 2f538fe5829bd5d992c4a0c94ff027e8086f1d0e t/30.failing_tests.cd.t
 SHA1 4f49a9ad0ee19a66fe5920b48c6ca64d2b953032 t/30.failing_tests.track.t
-SHA1 a3a8da67959b3a307d1b16fdac71f71e98dbcbdb t/30.missing_methods.t
-SHA1 d5de118a29fddefce63f37fa9ba364455f807c1a t/40.untested.columns.t
+SHA1 5f646f188cfdc15b676a29677f26c40d0197fbfb t/30.missing_methods.t
+SHA1 9e7b8d06df7674070ece99580af26c842cc79127 t/40.untested.columns.t
 SHA1 af9f2b59cca4fcf130deefd45072e2248d1ff975 t/lib/DBHelper.pm
 SHA1 fb56b1f84a45bdaafd17069e1cedb4a99b049217 t/lib/TDCSTest.pm
 SHA1 46a0635aeaba980e670e71e3c7ff3ae757499b28 t/lib/TDCSTest/Schema.pm
@@ -62,7 +62,7 @@ SHA1 1049ee23670b954c6a30d646210af971b78d03d6 t/var/unexpected.db
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.5 (GNU/Linux)
 
-iD8DBQFSd8pEh4j7xTiFuxERAhQFAJ9H/KJVUNYlOfx8nD4ukf6zmqTYlACgs4JP
-ud5qjrcFjc1CYrxpFEd49TU=
-=aoyK
+iD8DBQFSeMmfh4j7xTiFuxERAkIcAKCSfby/m/mDVaLrF5KPUDXZYSvo8wCg0wzD
+ys+Ih/j6wOGlnps24mnQcn4=
+=yFXB
 -----END PGP SIGNATURE-----
